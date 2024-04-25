@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appdechuva.MainPage">
+
+   <Grid>
+       <Image Source="sol.jpg"
+               Opacity=".6"
+               Aspect="AspectFill"/>
+        <Label Text="Sunrise"
+            TextColor="Marine"
+            Margin="20"
+            FontSize="60"
+            FontFamily="fonte.font"
+            HorizontalOptions="Center"
+            HorizontalTextAligment="Center"
+            VerticalOptions="Center"/>
+        <VerticalOptions="End"
+          Spacing="10"
+          Margin="15,0,15,40">
+
+        <Label x:Name="LabelSunrise"
+          IsVisible="false"
+          Margin="10,20"
+          CornerRadius="20"
+          BackgroundColor="Gray"
+          HorizontalOptions="Fill"
+          VerticalOptions="Fill">
+
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="60"/>
+              <RowDefinition Height="60"/>
+              <RowDefinition Height="60"/>
+              <RowDefinition Height="60"/>
+              <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColunmDefinitions>
+              <ColunmDefinition Width="*"/>
+              <ColunmDefinition Width="*"/>
+              <ColunmDefinition Width="*"/>
+            </Grid.ColunmDefinitions>
+          <Frame Grid.Row="1"
+                 Grid.Colunm="0">
+              <Grid>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*"/>
+                  <RowDefinition Height="*"/>
+                <Grid.RowDefinitions/>
+                <Grid.ColunmDefinitions/>
+                  <ColunmDefinition Width="*"/>
+                  <ColunmDefinition Width="*"/>
+                <Grid.ColunmDefinitions>
+          <Label Text="Chuva"
+                 Grid.Row="0"
+                 Grid.Colunm="0"/>
+          <Label Text="Umidade"
+                 Grid.Row="1"
+                 Grid.Colunm="0"/>
+           <Label x:Name="LabelChuva"
+                Grid.Row="0"
+                Grid.Colunm="1"/>
+          </Grid>
+        </Frame> 
+        <Frame Grid.Row="2"
+                 Grid.Colunm="0">
+              <Grid>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*"/>
+                  <RowDefinition Height="*"/>
+                <Grid.RowDefinitions/>
+                <Grid.ColunmDefinitions/>
+                  <ColunmDefinition Width="*"/>
+                  <ColunmDefinition Width="*"/>
+                <Grid.ColunmDefinitions>
+          <Label Text="Sol"
+                 Grid.Row="0"
+                 Grid.Colunm="0"/>
+            <Frame Grid.Row="2"
+                 Grid.Colunm="0">
+              <Grid>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*"/>
+                  <RowDefinition Height="*"/>
+                <Grid.RowDefinitions/>
+                <Grid.ColunmDefinitions/>
+                  <ColunmDefinition Width="*"/>
+                  <ColunmDefinition Width="*"/>
+                <Grid.ColunmDefinitions>
+          <Label Text="Nublado"
+                 Grid.Row="0"
+                 Grid.Colunm="0"/>
+
+        
+
+           
