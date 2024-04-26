@@ -11,7 +11,7 @@
             TextColor="Marine"
             Margin="20"
             FontSize="60"
-            FontFamily="fonte.font"
+            FontFamily="hontary.font"
             HorizontalOptions="Center"
             HorizontalTextAligment="Center"
             VerticalOptions="Center"/>

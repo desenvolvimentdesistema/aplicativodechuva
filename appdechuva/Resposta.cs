@@ -5,19 +5,19 @@ public class Resposta
 }
     Results Results;
     Resposta Resposta;
-void MainPage()
+    void MainPage()
     {
         InitializeComponent();
-        AtualizaTempo();
+        AtualizaTemp();
     }
-void PreencheTela()
+    void Preenche.Tela()
 {
-    LabelTempo.Text=Results.Temp.ToString();
-    LabelTempo.Text=Resposta.Results.Temp.ToString();
+    LabelTemp.Text=Results.Temp.ToString();
+    LabelTemp.Text=Resposta.Results.Temp.ToString();
 }
-void AtualizaTempo()
+void AtualizaTemp()
 {
-    Results=JsonSerializer.Deserealizer<Results>(content);
-    Resposta=JsonSerializer.Deserealizer<Resposta>;
+    Results=Json.Serializer.Deserealizer<Results>(content);
+    Resposta=Json.Serializer.Deserealizer<Resposta>;
     PreencheTela();
 }

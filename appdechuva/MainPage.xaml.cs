@@ -2,7 +2,6 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
     public MainPage()
 	{
@@ -12,34 +11,35 @@ public partial class MainPage : ContentPage
     public partial class MainPage
 	{
 		Const String Url="https://api.hgbrasil.com/weather?woeid=455927&Key=f5f447f3"
-		Resulsts Resposta;
-		void Atualiza Tempo()
+		Results Resposta;
+		void Atualiza Temp();
 		
 	}
-           try
+	
+           Try
 		   {
 			
-		   var httpClient=new HttpClient();
-		   var Response=await HttpClient.GetAsync(Url);
-		   If (Response.Is SuccessStatusCode);
+		   Var HttpClient=new HttpClient();
+		   Var Resposta=await.HttpClient.GetAsync(Url);
+		   If (Resposta.IsSuccessStatusCode);
 		   }
-			String Content=Response.Content.ReadAsStringAsync();
+			String Content=Resposta.Content.ReadAsStringAsync();
 				Resposta=Json Serializer.Deserialize<Results>(Content);
-}
+
 
 		    {
 			catch (Exception e)
 			}
 
 			{
-				// Erro	
+				//Erro
 		   	}
 	{
-		if (results.currently=="Sol")
+		if (Results.currently=="Sol")
 		{
-			if (results.rain >=50 )
+			if (Results.rain >=50 )
 				imgBackground.Source = "chuvadedia.jpg";
-			else if (results.cloudness >=50 )
+			else if (Results.cloudness >=50 )
 				imgBackground.Source = "nublado.jpg";
 			else
 				imgBackground.Source = "sol.jpg";
@@ -47,11 +47,11 @@ public partial class MainPage : ContentPage
 	}
 		else
 		{
-			if (results.currently=="Night")
+			if (Results.currently=="Night")
 		{
-			if (results.rain >=50 )
+			if (Results.rain >=50 )
 				imgBackground.Source = "chuvadenoite.jpg";
-			else if (results.cloudness >=50 )
+			else if (Results.cloudness >=50 )
 				imgBackground.Source = "noitenublada.jpg";
 			else
 				imgBackground.Source = "noite.jpg";
@@ -59,4 +59,5 @@ public partial class MainPage : ContentPage
 
 		}
 }
+
 
