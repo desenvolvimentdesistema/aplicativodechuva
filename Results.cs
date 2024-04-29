@@ -7,9 +7,9 @@ public class Results
 
     public string City {get; set;}
 
-    public int Humidity {get; set;}
+    public int Humidade {get; set;}
 
-    public double Rain {get; set;}
+    public double Chuva {get; set;}
 
     public string Sunrise {get; set}
 

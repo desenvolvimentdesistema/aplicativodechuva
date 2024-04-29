@@ -8,16 +8,16 @@ public class Resposta
     void MainPage()
     {
         InitializeComponent();
-        AtualizaTemp();
+        AtualizaTempo();
     }
-    void Preenche.Tela()
+    void PreencheTela()
 {
-    LabelTemp.Text=Results.Temp.ToString();
-    LabelTemp.Text=Resposta.Results.Temp.ToString();
+    LabelTempo.Text=Results.Tempo.ToString();
+    LabelTempo.Text=Resposta.Results.Tempo.ToString();
 }
-void AtualizaTemp()
+void AtualizaTempo()
 {
-    Results=Json.Serializer.Deserealizer<Results>(content);
-    Resposta=Json.Serializer.Deserealizer<Resposta>;
+    Results=JsonSerializer.Deserealizer<Results>(content);
+    Resposta=JsonSerializer.Deserealizer<Resposta>;
     PreencheTela();
 }
