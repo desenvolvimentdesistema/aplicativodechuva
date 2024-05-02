@@ -1,41 +1,46 @@
-﻿namespace appdechuva;
+﻿using System.Text.Json;
+
+namespace appdechuva;
 
 public partial class MainPage : ContentPage
-
-
-    Results Resultado;
+{
+	const String Url="https://api.hgbrasil.com/weather?woeid=455927&Key=f5f447f3";
+    Results Response;
 	public MainPage()
 	{
  		InitializeComponent();
+		AtualizaTempo();
 	}
 
-    public partial class MainPage
+	void AtualizaTempo()
+    {
+        response=JsonSerializer.Deserialize<Response>(content);
+        FillScreen();
+    }
+    void FillScreen()
+    {
+        LabelTempo.Text=response.Results.Tempo;
+    }
+	async void AtualizaTempo()
 	{
-		Const String Url="https://api.hgbrasil.com/weather?woeid=455927&Key=f5f447f3"
-		Results Resposta;
-		void Atualiza Tempo();
-	}
 		try
 		{
-		   catch (Exception e)
-		}
-		   var HttpClient=new HttpClient();
-		   var Resposta=await HttpClient.GetAsync(Url);
-		   If (Resposta.IsSuccessStatusCode);
-		{
-			String Content=Resposta.Content.ReadAsStringAsync();
-			Resposta=JsonSerializer.Deserialize<Results>(Content);
-		}
-
-		    {
-			catch (Exception e);
-			}
-
+			var httpClient=new HttpClient();
+			var httpResponse=await httpClient.GetAsync(Url);
+			if(httpResponse.IsSuccessStatusCode)
 			{
-				//Erro
-		   	}
-	
-		if (Results.currently=="Sol")
+				string content=await
+		httpResponse.Content.ReadAsStringAsync();
+				Response=JsonSerializer.Deserialize<Results>(content);
+			}
+		}
+		catch (Exception e)
+		{
+			//Handle error
+		}
+		if (Response!=null)
+		{
+			if (Results.currently=="Sol")
 		{
 			if (Results.Chuva >=50 )
 				imgBackground.Source = "chuvadedia.jpg";
@@ -55,12 +60,7 @@ public partial class MainPage : ContentPage
 				imgBackground.Source = "noitenublada.jpg";
 			else
 			imgBackground.Source = "noite.jpg";
+		}		
 		}
-
-		
-		
-
-		
-
-
-
+	}
+}

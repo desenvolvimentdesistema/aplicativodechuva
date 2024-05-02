@@ -4,31 +4,7 @@
              x:Class="appdechuva.MainPage">
 
    <Grid>
-       <Image Source="sol.jpg"
-               Opacity=".6"
-               Aspect="AspectFill"/>
-        <Label Text="Sunrise"
-            TextColor="Marine"
-            Margin="20"
-            FontSize="60"
-            FontFamily="hontary.font"
-            HorizontalOptions="Center"
-            HorizontalTextAligment="Center"
-            VerticalOptions="Center"/>
-        <VerticalOptions="End"
-          Spacing="10"
-          Margin="15,0,15,40">
-
-        <Label x:Name="LabelSunrise"
-          IsVisible="false"
-          Margin="10,20"
-          CornerRadius="20"
-          BackgroundColor="Gray"
-          HorizontalOptions="Fill"
-          VerticalOptions="Fill">
-
-          <Grid>
-            <Grid.RowDefinitions>
+    <Grid.RowDefinitions>
               <RowDefinition Height="60"/>
               <RowDefinition Height="60"/>
               <RowDefinition Height="60"/>
@@ -40,22 +16,49 @@
               <ColunmDefinition Width="*"/>
               <ColunmDefinition Width="*"/>
             </Grid.ColunmDefinitions>
-          <Frame Grid.Row="1"
+       <Image x:Name="imgBackground"
+               Opacity=".6"
+               Aspect="AspectFill"
+               Grid.RowSpan="4"
+               Grid.ColunmSpan="3"/>    
+        <Label Text="Sunrise"
+            TextColor="Marine"
+            Margin="20"
+            FontSize="60"
+            FontFamily="hontary.font"
+            HorizontalOptions="Center"
+            HorizontalTextAligment="Center"
+            VerticalOptions="Center"
+            Grid.Row="2"
+            Grid.Colunm="1"/>
+        <Label x:Name="LabelSunrise"
+          IsVisible="false"
+          Margin="10,20"
+          CornerRadius="20"
+          BackgroundColor="Gray"
+          HorizontalOptions="Fill"
+          VerticalOptions="Fill"
+          Grid.Row="0"
+          Grid.Colunm="1"/>
+
+          
+            
+            <Frame Grid.Row="1"
                  Grid.Colunm="0">
               <Grid>
                 <Grid.RowDefinitions>
                   <RowDefinition Height="*"/>
                   <RowDefinition Height="*"/>
-                <Grid.RowDefinitions/>
-                <Grid.ColunmDefinitions/>
-                  <ColunmDefinition Width="*"/>
-                  <ColunmDefinition Width="*"/>
+                </Grid.RowDefinitions>
                 <Grid.ColunmDefinitions>
+                  <ColunmDefinition Width="*"/>
+                  <ColunmDefinition Width="*"/>
+                </Grid.ColunmDefinitions>
           <Label Text="Chuva"
                  Grid.Row="0"
                  Grid.Colunm="0"/>
           <Label x:Name="LabelChuva"
-          <Label Text="Humidade"
+                Text="Humidade"
                  Grid.Row="1"
                  Grid.Colunm="0"/>
            <Label x:Name="LabelHumidade"
@@ -69,57 +72,35 @@
                 <Grid.RowDefinitions>
                   <RowDefinition Height="*"/>
                   <RowDefinition Height="*"/>
-                <Grid.RowDefinitions/>
-                <Grid.ColunmDefinitions/>
-                  <ColunmDefinition Width="*"/>
-                  <ColunmDefinition Width="*"/>
+                </Grid.RowDefinitions>
                 <Grid.ColunmDefinitions>
+                  <ColunmDefinition Width="*"/>
+                  <ColunmDefinition Width="*"/>
+                </Grid.ColunmDefinitions>
           <Label Text="Sol"
                  Grid.Row="0"
                  Grid.Colunm="0"/>
+
           <Label x:Name="LabelSol"   
-            <Frame Grid.Row="2"
-                 Grid.Colunm="0">
-              <Grid>
-                <Grid.RowDefinitions>
-                  <RowDefinition Height="*"/>
-                  <RowDefinition Height="*"/>
-                <Grid.RowDefinitions/>
-                <Grid.ColunmDefinitions/>
-                  <ColunmDefinition Width="*"/>
-                  <ColunmDefinition Width="*"/>
-                <Grid.ColunmDefinitions>
+                Grid.Row="2"
+                 Grid.Colunm="0"/>
+            
           <Label Text="Nublado"
                  Grid.Row="0"
                  Grid.Colunm="0"/>
+
           <Label x:Name="LabelNublado"
-            <Frame Grid.Row="2"
-                 Grid.Colunm="0">
-              <Grid>
-                <Grid.RowDefinitions>
-                  <RowDefinition Height="*"/>
-                  <RowDefinition Height="*"/>
-                <Grid.RowDefinitions/>
-                <Grid.ColunmDefinitions/>
-                  <ColunmDefinition Width="*"/>
-                  <ColunmDefinition Width="*"/>
-                <Grid.ColunmDefinitions>
+                 Grid.Row="2"
+                 Grid.Colunm="0"/>
+              
           <Label Text="Vento"
                  Grid.Row="0"
                  Grid.Colunm="0"/>
+
           <Label x:Name="LabelVento"
-            <Frame Grid.Row="2"
-                 Grid.Colunm="0">
-              <Grid>
-                <Grid.RowDefinitions>
-                  <RowDefinition Height="*"/>
-                  <RowDefinition Height="*"/>
-                <Grid.RowDefinitions/>
-                <Grid.ColunmDefinitions/>
-                  <ColunmDefinition Width="*"/>
-                  <ColunmDefinition Width="*"/>
-                <Grid.ColunmDefinitions>
+                Grid.Row="2"
+                 Grid.Colunm="0"/>
+                  </Grid>
+            </Frame>
 
-        
-
-           
+            </Grid>

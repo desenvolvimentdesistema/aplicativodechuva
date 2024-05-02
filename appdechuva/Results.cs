@@ -1,7 +1,7 @@
 namespace appdetempo;
 public class Results
 {
-    public int Temp {get; set;}
+    public int Tempo {get; set;}
 
     public string Description{get; set;}
 
@@ -18,6 +18,8 @@ public class Results
     public string Wind_Speedy {get; set;}
 
     public string Wind_Direction {get; set;}
+
+    public List<Forecst> forecst{get;set;}
 }
 
 
